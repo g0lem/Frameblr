@@ -1,5 +1,6 @@
 :root {
   --text-primary-color: #000;
+  --quotation-text: 'Playfair Display', serif, 'Gibson', sans-serif;
 }
 
 
@@ -16,6 +17,7 @@
   font-size: 500%;
   font-weight: normal;
   font-family: CustomFont;
+  margin-bottom: 1%;
 }
 
 .banner{
@@ -31,9 +33,26 @@
 
 p{
 
-	font-family: 'Playfair Display', serif, 'Gibson', sans-serif;
+	font-family: var(--quotation-text);
 	font-weight: 400;
 	font-size: 20px;
 
+}
 
+.overPhoto{
+
+	margin-top: -2.9em;
+
+
+}
+
+.box{
+	background-color: black;
+	color: white;
+	position: relative;
+	max-width: 50%;
+	max-height: 7%
+	height: 10%;
+	width: 50%;
+	margin-left: 25%;
 }
