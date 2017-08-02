@@ -1,0 +1,39 @@
+:root {
+  --text-primary-color: #000;
+}
+
+
+@font-face {
+    font-family: CustomFont;
+    src: url("ferrum.otf") format("opentype");
+}
+
+
+
+ .pageTitle {
+  color: var(--text-primary-color);
+  letter-spacing: -7px;
+  font-size: 500%;
+  font-weight: normal;
+  font-family: CustomFont;
+}
+
+.banner{
+
+
+	background-image: url('banner.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: inherit;
+	max-width: 100%;
+
+}
+
+p{
+
+	font-family: 'Playfair Display', serif, 'Gibson', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+
+
+}
