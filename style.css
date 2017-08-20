@@ -48,7 +48,6 @@ img{
 .banner{
 
 
-	background-image: url('banner.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: inherit;
