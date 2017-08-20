@@ -6,9 +6,11 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <meta name="image:Header" content=""/>
+    <meta name="image:User" content=""/>
 
 
   <style type="text/css">
@@ -268,7 +270,7 @@ article{
   behavior: url(PIE.htc); /* remove if you don't care about IE8 */
   height: 100%;
   background: black;
-  content: url('photo.jpg');
+  content: url('{PortraitURL-128}');
   margin-left: 10%;
   vertical-align: center;
 }
@@ -351,7 +353,7 @@ article{
           <article class="post photo">
             <figure>
               {LinkOpenTag}
-                  <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
+                 <div class="banner"> <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" align="center" /> </div>
 
 
               {LinkCloseTag}
@@ -373,7 +375,7 @@ article{
 
         {block:Photoset}
           <article class="post photoset">
-            <figure>
+            <figure align="center">
               {Photoset-500}
               {block:Caption}
                 <figcaption>
@@ -504,6 +506,39 @@ article{
 </div>
 
  {/block:Posts}
+
+<footer align="center">
+        {block:PermalinkPagination}
+          <nav>
+            {block:PreviousPost}<a href="{PreviousPost}">« {lang:Previous}</a>{/block:PreviousPost}
+            {block:NextPost}<a href="{NextPost}">{lang:Next} »</a>{/block:NextPost}
+          </nav>
+        {/block:PermalinkPagination}
+
+        {block:IndexPage}
+          {block:Pagination}
+            <nav>
+              {block:PreviousPage}<a href="{PreviousPage}">« {lang:Newer}</a>{/block:PreviousPage}
+
+              {block:IfUseNumberPagination}
+                {block:JumpPagination length="5"}
+                    {block:CurrentPage}
+                        <span>{PageNumber}</span>
+                    {/block:CurrentPage}
+                    {block:JumpPage}
+                        <a href="{URL}">{PageNumber}</a>
+                    {/block:JumpPage}
+                {/block:JumpPagination}
+              {/block:IfUseNumberPagination}
+
+              {block:NextPage}<a href="{NextPage}">{lang:Older} »</a>{/block:NextPage}
+            </nav>
+          {/block:Pagination}
+        {/block:IndexPage}
+        <p>{text:Footer Text}</p>
+  </footer>
+
+
 </div>
 
   <div class="rightPanel">
@@ -532,7 +567,7 @@ article{
   </div>
   
 </div>
-
+      
 
 </body>
 
